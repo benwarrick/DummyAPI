@@ -11,7 +11,8 @@ public class DummyApi {
 	
 	@PostMapping(path = "/email", consumes = "application/json", produces = "application/json")
 	public ResponseEntity sendEmail(@RequestBody EmailRequest email) {
-		
+		System.out.println(email.getTitle() + ": " + email.getMessage());
+		System.out.println(email); 
 		ResponseEntity response = new ResponseEntity(); 
 		response.setStatus("Success"); 
 		response.setDescription("Email sent.");
