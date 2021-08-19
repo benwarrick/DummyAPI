@@ -2,6 +2,7 @@ package com.bw.dummyApi.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.codec.multipart.Part;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,6 +37,14 @@ public class DummyApi {
 		response.setStatus("Success");
 		response.setDescription("Emailed queued for processing");
 		
+		return response; 
+	}
+	
+	@GetMapping(path = "/test", produces = "application/json")
+	public DummyEntity test() {
+		DummyEntity response = new DummyEntity();
+		response.setStatus("Success");
+		response.setDescription("Test");
 		return response; 
 	}
 	
