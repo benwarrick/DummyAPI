@@ -1,6 +1,6 @@
 package com.bw.dummyApi.api;
 
-public class ResponseEntity {
+public class DummyEntity {
 	private String status;
 	private String description;
 	public String getStatus() {
